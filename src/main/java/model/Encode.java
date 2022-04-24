@@ -20,9 +20,9 @@ public class Encode {
     }
 
     public boolean sValidMessage(){
-        char [] Char = sMessage.toCharArray();
+        char [] chars = sMessage.toCharArray();
 
-        for (char c:Char){
+        for (char c:chars){
             if(Character.isLetter(c) && c !=' '){
                 return true;
             }
@@ -46,7 +46,7 @@ public class Encode {
 
          for(int i=0; i< ciphertextArray.length; i++){
              if(sMessage.charAt(i)== ' '){
-                 cipherText +=" ";
+                 cipherText +="";
              }else {
                  int charPosition=alpha.indexOf(sMessage.charAt(i));
                  int shiftKey=(sKey+charPosition)%26;

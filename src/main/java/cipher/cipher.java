@@ -24,7 +24,17 @@ public class cipher {
             shiftKey=sc.nextInt();
 
             Encode encode = new Encode(message, shiftKey);
-            System.out.println(String.format("Your input text was:%s", encode));
+            System.out.println(String.format("Your input text was:%s", encode.getMessage()));
+            System.out.println(String.format("Your encrypted message is:%s",encode.encrypt()));
+
+        } else if (option==2) {
+            System.out.println("Input the text to decrypt:");
+            message=sc.nextLine().toUpperCase();
+            System.out.println("Input preferred shift key between 1 and 26:");
+            shiftKey=sc.nextInt();
+
+            Decode decode=new Decode(message, shiftKey);
+
         }
     }
 }
