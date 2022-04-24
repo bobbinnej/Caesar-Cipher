@@ -1,5 +1,6 @@
 package cipher;
 // Import for scanner
+import model.Decode;
 import model.Encode;
 
 import javax.sound.sampled.AudioFormat;
@@ -33,8 +34,12 @@ public class cipher {
             System.out.println("Input preferred shift key between 1 and 26:");
             shiftKey=sc.nextInt();
 
-            Decode decode=new Decode(message, shiftKey);
+            Decode decode= new Decode(shiftKey, message);
+            System.out.println(String.format("Your input text was:%s", decode.getMessage()));
+            System.out.println(String.format("Your decrypted message is:%s",decode.decrypt()));
 
+        }else{
+            System.out.println("This is not among the given options");
         }
     }
 }
