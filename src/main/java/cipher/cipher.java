@@ -20,7 +20,7 @@ public class cipher {
         if(option==1){
             System.out.println("Input message to encrypt:");
             message=sc.nextLine().toUpperCase();
-            System.out.println("Input preferred shift key between 1 and 25:");
+            System.out.println("Input preferred shift key between 1 and 26:");
             shiftKey=sc.nextInt();
 
             Encode encode = new Encode(message, shiftKey);
