@@ -1,7 +1,13 @@
 package model;
 
 public class Encode {
-    public static void main(String[] args) {
+  private int sKey;
+  private String sMessage;
 
+  // Lets instantiate our code
+    public Encode(String message, int shiftKey){
+        sKey=shiftKey;
+        sMessage=message;
     }
+
 }
